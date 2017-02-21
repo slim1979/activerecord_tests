@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<% @book.each do |x| %>	
+	<% if x.name.length =="" %>
+	Книг нет
+	<% else %>
+	<p>
+		<blockquote>
+			<%= x.name %>
+			<p style="font-size:65%; color:grey"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Добавлена: <%= x.created_at%></p>
+		</blockquote>	
+	</p>
+	
+	<% end %>
+<% end %>

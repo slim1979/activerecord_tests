@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<h3>Авторы</h3>
+<% @authors.each do |x| %>
+	<a href="/author/<%=x.id%>">
+		#<%= x.id %>. 
+		<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 
+		<%= x.name %> 
+		<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+		<%= x.books.size %>
+	</a>
+<br/>
+<% end %>
+

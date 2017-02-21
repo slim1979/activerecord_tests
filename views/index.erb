@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<h2> Test </h2>
+<form action="/" method="POST" role="form">
+
+	<label>Выберите автора:</label>		
+		<select name="author_name" class="form-control" >
+		
+		<% @authors_list.each do |author| %>
+			
+			<option <%= @choosen_author == author.name ? 'selected' : '' %>>
+				<%author.id%><%= author.name %>
+			</option>
+			
+		<% end %>
+		
+		</select><br/>
+	
+	<label>Введите название книги:</label>	
+	<input type="text" id="datetimepicker" class="form-control" name ="book" placeholder="Введите название книги"><br/>
+	
+	
+	<button type="submit" class="btn btn-success" >Записаться</button>
+	
+</form>
+	
