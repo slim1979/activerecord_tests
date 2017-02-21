@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<% @book.each do |x| %>	
-	<% if x.name.length =="" %>
-	Книг нет
-	<% else %>
+<p style="margin-left:15px">
+<%= @book.empty? ? 'У автора пока нет книг' : 'Доступные книги автора:'%>
+</p>
+<div style="width:auto; height:150px; border:1px solid black;">
+
+
+<% @book.each do |x| %>		
+<div style="float:left; border:1px solid black; margin:10px; heigth:auto">
+<div style="position: relative; width:80%; height:100px; background-color:grey; z-index: 0">
+</div>
+<div style="position: relative; width:80%; height:100px; background-color:white; border:1px solid black; top:-112px; left:-10px;z-index: 1">
+
 	<p>
 		<blockquote>
 			<%= x.name %>
-			<p style="font-size:65%; color:grey"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Добавлена: <%= x.created_at%></p>
+			<p style="font-size:65%; color:grey">
+				<span class="glyphicon glyphicon-time" aria-hidden="true"></span> Добавлена: <%= x.created_at%>
+			</p>
 		</blockquote>	
-	</p>
-	
-	<% end %>
+	</p>	
+</div>
+</div>
 <% end %>
+
