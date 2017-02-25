@@ -59,6 +59,10 @@ get '/author/:id' do
 	erb :books
 end
 
+get '/logistico' do
+	erb :logistico2
+end
+
 get '/login/form' do
   erb :login_form
 end

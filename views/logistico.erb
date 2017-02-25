@@ -1,0 +1,655 @@
+<div class='row'>
+								<div class='title'>Добавить груз</div>
+							</div>
+
+							<div class='row pad0'>
+								<div class='title_green'><span>Груз</span></div>
+							</div>
+
+							<div class='row light'>
+								<label class='first'>Наименование<span class='req'>*</span>:</label>
+								<div class='item w323px'>
+									<input placeholder="Наименование" class="requered fill-me-in dont-forget-me" type="text" value="тест2" name="cargo[title]" id="cargo_title" />
+								</div>
+								<div class='item w86px tar padr8'>
+									ADR:
+								</div>
+								<div class='item w144px'>
+									<!-- select -->
+									<span class='p_select'>
+										<input class="select_value" type="hidden" value="1" name="cargo[adr]" id="cargo_adr" />
+										<span class='current'>1</span>
+										<ul>
+											<li><a href='#' data-select='00'>&mdash;</a></li>
+											<li><a href='#' data-select='01'>1</a></li>
+											<li><a href='#' data-select='02'>2</a></li>
+											<li><a href='#' data-select='03'>3</a></li>
+											<li><a href='#' data-select='04'>4</a></li>
+											<li><a href='#' data-select='05'>5</a></li>
+											<li><a href='#' data-select='06'>6</a></li>
+											<li><a href='#' data-select='07'>7</a></li>
+											<li><a href='#' data-select='08'>8</a></li>
+											<li><a href='#' data-select='09'>9</a></li>
+										</ul>
+									</span>
+									<!-- /select -->
+								</div>
+								<div class='item w159px tar padr17'>
+									<span class='check'>
+										<label for='cargo_insured'>
+											<span class='box active'></span>
+											<input name="cargo[insured]" type="hidden" value="0" /><input type="checkbox" value="1" checked="checked" name="cargo[insured]" id="cargo_insured" />
+											Груз застрахован
+										</label>
+									</span>
+								</div>
+							</div>
+
+							<div class='row'>
+								<label class='first'>Габариты:</label>
+
+								<div class='item w59px fs10 padr8 brdl tar'>Вес, т<span class='req'>*</span>:</div>
+								<div class='item w83px'><input placeholder="" class="requered fill-me-in dont-forget-me" type="number" value="20.0" name="cargo[s_weight]" id="cargo_s_weight" /></div>
+
+								<div class='item w81px fs10 padr8 tar'>Объём, м<sup>3</sup>  &nbsp;<span class='req'>*</span>:</div>
+								<div class='item w83px'><input placeholder="" class="requered fill-me-in dont-forget-me" type="number" value="82.0" name="cargo[s_volume]" id="cargo_s_volume" /></div>
+
+								<div class='item w86px fs10 padr8 tar'>Длина, м:</div>
+								<div class='item w83px'><input placeholder="" type="number" name="cargo[s_length]" id="cargo_s_length" /></div>
+
+								<div class='item w90px fs10 padr8 tar'>Ширина, м:</div>
+								<div class='item w83px'><input placeholder="" type="number" name="cargo[s_width]" id="cargo_s_width" /></div>
+
+								<div class='item w90px fs10 padr8 tar'>Высота, м:</div>
+								<div class='item w83px padr17 brdr'><input placeholder="" type="number" name="cargo[s_height]" id="cargo_s_height" /></div>
+							</div>
+
+							<div class='row light'>
+								<label class='first'>Упаковка:</label>
+								<div class='item w323px mr11'>
+									<!-- select -->
+									<span class='p_select'>
+										<input class="select_value" type="hidden" value="rossipu" name="cargo[package]" id="cargo_package" />
+										<span class='current'>россыпью</span>
+										<ul>
+												<li><a href='#' data-select='no_package'>&mdash;</a></li>
+												<li><a href='#' data-select='navalom'>навалом</a></li>
+												<li><a href='#' data-select='korobki'>коробки</a></li>
+												<li><a href='#' data-select='rossipu'>россыпью</a></li>
+												<li><a href='#' data-select='zapallechen'>запаллечен</a></li>
+												<li><a href='#' data-select='vpachkah'>в пачках</a></li>
+												<li><a href='#' data-select='meshki'>мешки</a></li>
+												<li><a href='#' data-select='bigbag'>биг-бэг</a></li>
+												<li><a href='#' data-select='yashiki'>ящики</a></li>
+												<li><a href='#' data-select='listi'>листы</a></li>
+												<li><a href='#' data-select='bochki'>бочки</a></li>
+												<li><a href='#' data-select='kanistra'>канистра</a></li>
+												<li><a href='#' data-select='ryloni'>рулоны</a></li>
+												<li><a href='#' data-select='piramida_pack'><span class="translation_missing" title="translation missing: ru.cargo.packages.piramida_pack">Piramida Pack</span></a></li>
+										</ul>
+									</span>
+									<!-- /select -->
+								</div>
+
+								<div class='item w83px padr8'><input placeholder="" type="number" name="cargo[package_num]" id="cargo_package_num" /></div>
+								<div class='item w90px fs10'>шт.</div>
+
+								<div class='item w75px fs10 padr8'>Ремней, шт.:</div>
+								<div class='item w83px'><input placeholder="" type="number" name="cargo[package_straps]" id="cargo_package_straps" /></div>
+							</div>
+
+							<div class='row padb0'>
+								<label class='first two_lines'>Вариант<br />перевозки:</label>
+								<div class='item w169px'>
+									<span class='check two_lines'>
+										<label for='cargo_trans_sepcar'>
+											<span class='box'></span>
+											<input name="cargo[trans_sepcar]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[trans_sepcar]" id="cargo_trans_sepcar" />
+											<span class='text'>Только отдельной<br />машиной</span>
+										</label>
+									</span>
+								</div>
+								<div class='item w181px'>
+									<span class='check two_lines'>
+										<label for='cargo_trans_scar_upload'>
+											<span class='box'></span>
+											<input name="cargo[trans_scar_upload]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[trans_scar_upload]" id="cargo_trans_scar_upload" />
+											<span class='text'>Отдельной машиной<br />или догрузом</span>
+										</label>
+									</span>
+								</div>
+								<div class='item w159px'>
+									<span class='check'>
+										<label for='cargo_trans_upload'>
+											<span class='box'></span>
+											<input name="cargo[trans_upload]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[trans_upload]" id="cargo_trans_upload" />
+											Только догрузом
+										</label>
+									</span>
+								</div>
+								<div class='item w135px'>
+									<span class='check'>
+										<label for='cargo_trans_combined'>
+											<span class='box'></span>
+											<input name="cargo[trans_combined]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[trans_combined]" id="cargo_trans_combined" />
+											Сброрный груз
+										</label>
+									</span>
+								</div>
+								<div class='item w81px'>
+									<span class='check other_p'>
+										<label for='cargo_trans_other'>
+											<span class='box'></span>
+											<input name="cargo[trans_other]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[trans_other]" id="cargo_trans_other" />
+											Другое
+										</label>
+									</span>
+								</div>
+								<div class='item w157px opa40' id='other_p'>
+									<input placeholder="" type="text" value="" name="cargo[trans_other_val]" id="cargo_trans_other_val" />
+								</div>
+							</div>
+
+							<div class='row pad0'>
+								<div class='title_green'><span>Маршрут</span></div>
+							</div>
+
+							<div class='row light'>
+								
+									<input type="hidden" value="1" name="cargo[points_attributes][0][position]" id="cargo_points_attributes_0_position" />
+									<input type="hidden" value="zagryzka" name="cargo[points_attributes][0][p_type]" id="cargo_points_attributes_0_p_type" />
+									<label class='first'>Загрузка<span class='req'>*</span>:</label>
+									<div class='item w323px autocomplite_item'>
+										<input placeholder="Наименование нас. пункта" class="requered js-address-autocomplete fill-me-in dont-forget-me" type="text" value="Россия, Санкт-Петербург " name="cargo[points_attributes][0][city]" id="cargo_points_attributes_0_city" />
+									</div>
+
+									<div class='item w86px tar padr8 two_lines'>Район,<br />улица:</div>
+									<div class='item w464px autocomplite_item'>
+										<input placeholder="наименование района, улицы" type="text" value="" name="cargo[points_attributes][0][street]" id="cargo_points_attributes_0_street" />
+									</div>
+							</div>
+
+							<div class='row'>
+								
+									<input type="hidden" value="1000" name="cargo[points_attributes][1][position]" id="cargo_points_attributes_1_position" />
+									<input type="hidden" value="razgryzka" name="cargo[points_attributes][1][p_type]" id="cargo_points_attributes_1_p_type" />
+									<label class='first'>Разгрузка<span class='req'>*</span>:</label>
+									<div class='item w323px autocomplite_item'>
+										<input placeholder="Наименование нас. пункта" class="requered js-address-autocomplete fill-me-in dont-forget-me" type="text" value="Россия, Приморский край, Владивосток " name="cargo[points_attributes][1][city]" id="cargo_points_attributes_1_city" />
+									</div>
+
+									<div class='item w86px tar padr8 two_lines'>Район,<br />улица:</div>
+									<div class='item w464px autocomplite_item'>
+										<input placeholder="наименование района, улицы" type="text" value="" name="cargo[points_attributes][1][street]" id="cargo_points_attributes_1_street" />
+
+									</div>
+							</div>
+
+							<div class='row light padb0'>
+								<div class='abs_circle_reis item w101px'>
+									<span class='check fs10'>
+										<label for='circle'>
+											<span class='box'></span>
+											<input name="cargo[route_round]" type="hidden" value="0" /><input id="circle" type="checkbox" value="1" name="cargo[route_round]" />
+											Кругорейс
+										</label>
+									</span>
+								</div>
+									
+										<div class='to_copy'>
+											<input type="hidden" value="2" name="cargo[points_attributes][2][position]" id="cargo_points_attributes_2_position" />
+											<label class='first two_lines'>Доп. пункт<br />маршрута:</label>
+											<div class='item w323px autocomplite_item'>
+												<input placeholder="Наименование" class="js-address-autocomplete" type="text" value="Россия, Москва " name="cargo[points_attributes][2][city]" id="cargo_points_attributes_2_city" />
+											</div>
+	
+											<div class='item w86px tar padr8'>Тип:</div>
+											<div class='item w144px autocomplite_item'>
+												<!-- select -->
+												<span class='p_select'>
+													<input class="select_value" value="zagryzka" type="hidden" name="cargo[points_attributes][2][p_type]" id="cargo_points_attributes_2_p_type" />
+													<span class='current'>Загрузка</span>
+													<ul>
+															<li><a href='#' data-select='zagryzka'>Загрузка</a></li>
+															<li><a href='#' data-select='razgryzka'>Разгрузка</a></li>
+													</ul>
+												</span>
+												<!-- /select -->
+											</div>
+											<div class='item w173px tar mr46'>
+											</div>
+											<div class='spacer'></div>
+										</div>
+									
+										<div class='to_copy'>
+											<input type="hidden" value="3" name="cargo[points_attributes][3][position]" id="cargo_points_attributes_3_position" />
+											<label class='first two_lines'>Доп. пункт<br />маршрута:</label>
+											<div class='item w323px autocomplite_item'>
+												<input placeholder="Наименование" class="js-address-autocomplete" type="text" value="Россия, Республика Алтай, Шебалинский район, село Шебалино " name="cargo[points_attributes][3][city]" id="cargo_points_attributes_3_city" />
+											</div>
+	
+											<div class='item w86px tar padr8'>Тип:</div>
+											<div class='item w144px autocomplite_item'>
+												<!-- select -->
+												<span class='p_select'>
+													<input class="select_value" value="razgryzka" type="hidden" name="cargo[points_attributes][3][p_type]" id="cargo_points_attributes_3_p_type" />
+													<span class='current'>Загрузка</span>
+													<ul>
+															<li><a href='#' data-select='zagryzka'>Загрузка</a></li>
+															<li><a href='#' data-select='razgryzka'>Разгрузка</a></li>
+													</ul>
+												</span>
+												<!-- /select -->
+											</div>
+											<div class='item w173px tar mr46'>
+													<a href='#' class='add_district'>Добавить пункт</a>
+											</div>
+											<div class='spacer'></div>
+										</div>
+							</div>
+
+
+
+
+
+							<div class='row pad0'>
+								<div class='title_green'><span>Транспорт</span></div>
+							</div>
+
+							<div class='row light'>
+								<label class='first'>Тип кузова<span class='req'>*</span>:</label>
+								<div class='item w323px mr94'>
+									<!-- select -->
+									<span class='p_select requered_sel fill-me-in dont-forget-me'>
+										<input class="select_value" type="hidden" value="tentovanniy" name="cargo[car_type]" id="cargo_car_type" />
+										<span class='current'>- тентованный</span>
+										<ul>
+												<li><a href='#' data-select='no_car_type'>&mdash;</a></li>
+												<li><a href='#' data-select='luboy_zakrityi'>Любой закрытый</a></li>
+												<li><a href='#' data-select='tentovanniy'>- тентованный</a></li>
+												<li><a href='#' data-select='konteiner'>- контейнер</a></li>
+												<li><a href='#' data-select='fyrgon'>- фургон</a></li>
+												<li><a href='#' data-select='celnometall'>- цельнометалл-</a></li>
+												<li><a href='#' data-select='ref_izoterm'>реф- или изотерм-</a></li>
+												<li><a href='#' data-select='izotermicheskii'>- изотермический</a></li>
+												<li><a href='#' data-select='refrigerator'>- рефрижератор</a></li>
+												<li><a href='#' data-select='myltirejimniy'>- реф- мультирежимный</a></li>
+												<li><a href='#' data-select='s_peregorodkoy'>- реф- с перегородкой</a></li>
+												<li><a href='#' data-select='tyshevoz'>- реф--тушевоз</a></li>
+												<li><a href='#' data-select='luboy_otkritii'>любой открытый</a></li>
+												<li><a href='#' data-select='bortovoy'>- бортовой</a></li>
+												<li><a href='#' data-select='otkritii_kont'>- открытый конт-</a></li>
+												<li><a href='#' data-select='ploshadka'>- площадка без бортов</a></li>
+												<li><a href='#' data-select='samosval'>- самосвал</a></li>
+												<li><a href='#' data-select='shalanda'>- шаланда</a></li>
+												<li><a href='#' data-select='negabarit'>негабарит</a></li>
+												<li><a href='#' data-select='nizkoramnii'>- низкорамный</a></li>
+												<li><a href='#' data-select='nizkoram_platf'>- низкорам- платф-</a></li>
+												<li><a href='#' data-select='teleskopich'>- телескопический</a></li>
+												<li><a href='#' data-select='tral'>- трал</a></li>
+												<li><a href='#' data-select='balkovoz'>- балковоз (негабарит)</a></li>
+												<li><a href='#' data-select='avtobys'>автобус</a></li>
+												<li><a href='#' data-select='avtovoz'>автовоз</a></li>
+												<li><a href='#' data-select='avtovyshka'>автовышка</a></li>
+												<li><a href='#' data-select='avtotransporter'>автотранспортер</a></li>
+												<li><a href='#' data-select='betonovoz'>бетоновоз</a></li>
+												<li><a href='#' data-select='bitymovoz'>битумовоз</a></li>
+												<li><a href='#' data-select='benzovoz'>бензовоз</a></li>
+												<li><a href='#' data-select='vezdehod'>вездеход</a></li>
+												<li><a href='#' data-select='gazovoz'>газовоз</a></li>
+												<li><a href='#' data-select='zernovoz'>зерновоз</a></li>
+												<li><a href='#' data-select='konevoz'>коневоз</a></li>
+												<li><a href='#' data-select='kont_ploshadka'>конт-площадка</a></li>
+												<li><a href='#' data-select='kormovoz'>кормовоз</a></li>
+												<li><a href='#' data-select='kran'>кран</a></li>
+												<li><a href='#' data-select='lesovoz'>лесовоз</a></li>
+												<li><a href='#' data-select='manipylyator'>манипулятор</a></li>
+												<li><a href='#' data-select='mikroavtobys'>микроавтобус</a></li>
+												<li><a href='#' data-select='mykovoz'>муковоз</a></li>
+												<li><a href='#' data-select='panelevoz'>панелевоз</a></li>
+												<li><a href='#' data-select='pikup'>пикап</a></li>
+												<li><a href='#' data-select='pyhtovoz'>пухтовоз</a></li>
+												<li><a href='#' data-select='piramida'>пирамида</a></li>
+												<li><a href='#' data-select='rylonovoz'>рулоновоз</a></li>
+												<li><a href='#' data-select='sedelniy_tyagach'>седельный тягач</a></li>
+												<li><a href='#' data-select='skotovoz'>скотовоз</a></li>
+												<li><a href='#' data-select='steklovoz'>стекловоз</a></li>
+												<li><a href='#' data-select='trybovoz'>трубовоз</a></li>
+												<li><a href='#' data-select='cementovoz'>цементовоз</a></li>
+												<li><a href='#' data-select='cisterna'>цистерна</a></li>
+												<li><a href='#' data-select='shepovoz'>щеповоз</a></li>
+												<li><a href='#' data-select='evakyator'>эвакуатор</a></li>
+										</ul>
+									</span>
+									<!-- /select -->
+								</div>
+								<div class='item w181px'>
+									<span class='check fs10'>
+										<label for='cargo_car_pneumo'>
+											<span class='box'></span>
+											<input name="cargo[car_pneumo]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[car_pneumo]" id="cargo_car_pneumo" />
+											Пневмоход
+										</label>
+									</span>
+								</div>
+								<div class='item w181px'>
+									<span class='check fs10'>
+										<label for='cargo_car_trailer'>
+											<span class='box'></span>
+											<input name="cargo[car_trailer]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[car_trailer]" id="cargo_car_trailer" />
+											Сцепка
+										</label>
+									</span>
+								</div>
+								<div class='item w101px'>
+									<span class='check fs10'>
+										<label for='cargo_car_conic'>
+											<span class='box'></span>
+											<input name="cargo[car_conic]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[car_conic]" id="cargo_car_conic" />
+											Коники
+										</label>
+									</span>
+								</div>
+							</div>
+
+							<div class='row'>
+								<label class='first two_lines'>Тип<br />загрузки:</label>
+								<div class='item w323px'>
+									<!-- select -->
+									<span class='p_select'>
+										<input class="select_value" type="hidden" value="l_bokovaya" name="cargo[car_load]" id="cargo_car_load" />
+										<span class='current'>боковая</span>
+										<ul>
+												<li><a href='#' data-select='no_car_load'>&mdash;</a></li>
+												<li><a href='#' data-select='l_verhnyaa'>Верхняя</a></li>
+												<li><a href='#' data-select='l_bokovaya'>боковая</a></li>
+												<li><a href='#' data-select='l_zadnyaa'>задняя</a></li>
+												<li><a href='#' data-select='l_s_polnoy_rastenovkoy'>с полной растентовкой</a></li>
+												<li><a href='#' data-select='l_so_snyatiem_poperechin'>со снятием поперечных перекладин</a></li>
+												<li><a href='#' data-select='l_so_snyatiem_stoek'>со снятием стоек</a></li>
+												<li><a href='#' data-select='l_bez_vorot'>без ворот</a></li>
+												<li><a href='#' data-select='l_gidrobort'>гидроборт</a></li>
+												<li><a href='#' data-select='l_appareli'>аппарели</a></li>
+												<li><a href='#' data-select='l_s_obreshetkoy'>с обрешеткой</a></li>
+												<li><a href='#' data-select='l_s_bortami'>с бортами</a></li>
+												<li><a href='#' data-select='l_bokovaya_s_2h_storon'>боковая с 2-х сторон</a></li>
+										</ul>
+									</span>
+									<!-- /select -->
+								</div>
+								<div class='item two_lines w86px tar padr8 fs12'>
+									Тип<br />выгрузки:
+								</div>
+								<div class='item w323px mr94'>
+									<!-- select -->
+									<span class='p_select'>
+										<input class="select_value" type="hidden" value="u_zadnyaa" name="cargo[car_unload]" id="cargo_car_unload" />
+										<span class='current'>задняя</span>
+										<ul>
+												<li><a href='#' data-select='no_car_unload'></a></li>
+												<li><a href='#' data-select='u_verhnyaa'>Верхняя</a></li>
+												<li><a href='#' data-select='u_bokovaya'>боковая</a></li>
+												<li><a href='#' data-select='u_zadnyaa'>задняя</a></li>
+												<li><a href='#' data-select='u_s_polnoy_rastenovkoy'>с полной растентовкой</a></li>
+												<li><a href='#' data-select='u_so_snyatiem_poperechin'>со снятием поперечных перекладин</a></li>
+												<li><a href='#' data-select='u_so_snyatiem_stoek'>со снятием стоек</a></li>
+												<li><a href='#' data-select='u_bez_vorot'>без ворот</a></li>
+												<li><a href='#' data-select='u_gidrobort'>гидроборт</a></li>
+												<li><a href='#' data-select='u_appareli'>аппарели</a></li>
+												<li><a href='#' data-select='u_s_obreshetkoy'>с обрешеткой</a></li>
+												<li><a href='#' data-select='u_s_bortami'>с бортами</a></li>
+												<li><a href='#' data-select='u_bokovaya_s_2h_storon'>боковая с 2-х сторон</a></li>
+										</ul>
+									</span>
+									<!-- /select -->
+								</div>
+							</div>
+
+							<div class='row light'>
+								<label class='first'>Кол-во машин:</label>
+								<div class='item w127px mr198'>
+									<input type="number" name="cargo[car_num]" id="cargo_car_num" />
+								</div>
+								<div class='item tar padr8'>Документы:</div>
+								<div class='item w118px'>
+									<span class='check fs10'>
+										<label for='cargo_car_doc_tir'>
+											<span class='box'></span>
+											<input name="cargo[car_doc_tir]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[car_doc_tir]" id="cargo_car_doc_tir" />
+											TIR
+										</label>
+									</span>
+								</div>
+								<div class='item w128px'>
+									<span class='check fs10'>
+										<label for='cargo_car_doc_cmr'>
+											<span class='box'></span>
+											<input name="cargo[car_doc_cmr]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[car_doc_cmr]" id="cargo_car_doc_cmr" />
+											CMR
+										</label>
+									</span>
+								</div>
+								<div class='item w117px'>
+									<span class='check fs10'>
+										<label for='cargo_car_doc_ti'>
+											<span class='box'></span>
+											<input name="cargo[car_doc_ti]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[car_doc_ti]" id="cargo_car_doc_ti" />
+											T1
+										</label>
+									</span>
+								</div>
+								<div class='item w104px'>
+									<span class='check fs10'>
+										<label for='cargo_car_doc_med'>
+											<span class='box'></span>
+											<input name="cargo[car_doc_med]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[car_doc_med]" id="cargo_car_doc_med" />
+											Медкнижка
+										</label>
+									</span>
+								</div>
+							</div>
+
+							<div class='row pad0'>
+								<div class='title_green'><span>Когда</span></div>
+							</div>
+
+							<div class='row light'>
+								
+									<label class='first'>Дата загрузки<span class='req'>*</span>:</label>
+									<div class='item w127px mr108'>
+										<input class="datapicker date_from requered fill-me-in dont-forget-me" required="required" data-mindate="2017-02-24" type="text" value="24.02.17" name="cargo[points_attributes][0][when_date]" id="cargo_points_attributes_0_when_date" />
+									</div>
+									<div class='item w164px'>
+										Время загрузки:
+									</div>
+									<div class='item ttn w18px'>
+										c
+									</div>
+									<div class='item w88px'>
+										<input class="js-time-field" value="" type="text" name="cargo[points_attributes][0][when_time]" id="cargo_points_attributes_0_when_time" />
+									</div>
+									<div class='item w49px tar padr8 ttn'>по</div>
+									<div class='item w88px'>
+										<input class="js-time-field" value="" type="text" name="cargo[points_attributes][0][until_time]" id="cargo_points_attributes_0_until_time" />
+									</div>
+							</div>
+
+							<div class='row'>
+								
+									<label class='first'>Дата разгрузки<span class='req'>*</span>:</label>
+									<div class='item w127px mr108'>
+										<input class="datapicker date_from requered fill-me-in dont-forget-me" required="required" data-mindate="2017-02-24" type="text" value="24.02.17" name="cargo[points_attributes][1][when_date]" id="cargo_points_attributes_1_when_date" />
+									</div>
+									<div class='item w164px'>
+										Время загрузки:
+									</div>
+									<div class='item ttn w18px'>
+										c
+									</div>
+									<div class='item w88px'>
+										<input class="js-time-field" value="" type="text" name="cargo[points_attributes][1][when_time]" id="cargo_points_attributes_1_when_time" />
+									</div>
+									<div class='item w49px tar padr8 ttn'>по</div>
+									<div class='item w88px'>
+										<input class="js-time-field" value="" type="text" name="cargo[points_attributes][1][until_time]" id="cargo_points_attributes_1_until_time" />
+									</div>
+							</div>
+
+							<div class='row pad0'>
+								<div class='title_green'><span>Оплата</span></div>
+							</div>
+
+							<div class='row light pay_box padb0'>
+								<input type='hidden' value='0' class='marshrut_size' />
+
+								
+									<div class='box'>
+										<label class='first'>Вид оплаты<span class='req'>*</span>:</label>
+										<div class='item w323px mr9'>
+											<!-- select -->
+											<span class='p_select requered_sel fill-me-in dont-forget-me'>
+												<input class="select_value" type="hidden" value="b_nal_s_nds" name="cargo[cargo_payments_attributes][0][p_type]" id="cargo_cargo_payments_attributes_0_p_type" />
+												<span class='current'>Б/нал с НДС</span>
+												<ul>
+														<li><a href='#' data-select='nal_na_karty'>Наличные/на карту</a></li>
+														<li><a href='#' data-select='b_nal_s_nds'>Б/нал с НДС</a></li>
+														<li><a href='#' data-select='b_nal_bez_nds'>Б/нал без НДС</a></li>
+												</ul>
+											</span>
+											<!-- /select -->
+										</div>
+										<div class=''>
+											<div class='item w113px padr8'>
+												<input data="" class="requered fill-me-in dont-forget-me tac price" value="300000.0" placeholder="0" type="number" name="cargo[cargo_payments_attributes][0][sum]" id="cargo_cargo_payments_attributes_0_sum" />
+											</div>
+											<div class='item fs9 w34px'>
+												руб.
+											</div>
+											<div class='item w113px padr8'>
+												<input readonly="readonly" class="nobg tac price_count" placeholder="0" type="number" value="29.24" name="cargo[cargo_payments_attributes][0][per_km]" id="cargo_cargo_payments_attributes_0_per_km" />
+											</div>
+											<div class='item fs9 w52px'>
+												руб./км.
+											</div>
+										</div>
+										<div class='item w135px'>
+											<a href='#' class='see_stats'>Смотреть<br />статистику &gt;</a>
+										</div>
+										<div class='item w88px'>
+											<a href='#' class='add_pay'>добавить<br />оплату</a>
+											<a href='#' class='remove'></a>
+										</div>
+										<div class='spacer'></div>
+									</div>
+							</div>
+
+							<div class='row'>
+								<label class='first'>&nbsp;</label>
+
+								<div class='item w127px'>
+									<span class='check fs10'>
+										<label for='cargo_pay_on_unload'>
+											<span class='box'></span>
+											<input name="cargo[pay_on_unload]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[pay_on_unload]" id="cargo_pay_on_unload" />
+											На выгрузке
+										</label>
+									</span>
+								</div>
+
+								<div class='item w69px'>
+									<span class='check fs10 next_opa'>
+										<label for='cargo_pay_later'>
+											<span class='box'></span>
+											<input name="cargo[pay_later]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[pay_later]" id="cargo_pay_later" />
+											Через
+										</label>
+									</span>
+								</div>
+								<div class='item w35px mr4 opa40'>
+									<input disabled="disabled" type="number" name="cargo[pay_later_days]" id="cargo_pay_later_days" />
+								</div>
+								<div class='item two_lines w55px'>
+									Банк.<br />дней
+								</div>
+								<div class='item w84px fs10'>
+									Предоплата:
+								</div>
+								<div class='item w35px mr4'>
+									<input class="predoplata opa40" type="number" name="cargo[pay_prepay]" id="cargo_pay_prepay" />
+								</div>
+								<div class='item w37px'>
+									%
+								</div>
+								<div class='item w118px'>
+									<span class='check fs10 two_lines'>
+										<label for='cargo_pay_auction'>
+											<span class='box'></span>
+											<input name="cargo[pay_auction]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[pay_auction]" id="cargo_pay_auction" />
+											<span class='text'>Возможен<br />торг</span>
+										</label>
+									</span>
+								</div>
+								<div class='item w105px'>
+									<span class='check fs10 two_lines'>
+										<label for='cargo_pay_direct'>
+											<span class='box'></span>
+											<input name="cargo[pay_direct]" type="hidden" value="0" /><input type="checkbox" value="1" name="cargo[pay_direct]" id="cargo_pay_direct" />
+											<span class='text'>Прямой<br />договор</span>
+										</label>
+									</span>
+								</div>
+								<div class='item w52px fs10'>
+									Другое
+								</div>
+								<div class='item w157px'>
+									<input type="text" value="" name="cargo[pay_other]" id="cargo_pay_other" />
+								</div>
+							</div>
+
+							<div class='row pad0'>
+								<div class='title_green'><span>Контакты</span></div>
+							</div>
+
+							<div class='row light'>
+								<label class='first two_lines'>Контактное<br />лицо<span class='req'>*</span>:</label>
+								<div class='item w323px'>
+									<!-- select -->
+									<span class='p_select requered_sel fill-me-in dont-forget-me'>
+										<input class="select_value" type="hidden" value="62" name="cargo[contact_id]" id="cargo_contact_id" />
+										<span class='current'>Ефимов Н.В.</span>
+										<ul>
+												<li><a href='#' data-select='82'>апфы 2.У.</a></li>
+												<li><a href='#' data-select='62'>Ефимов Н.В.</a></li>
+										</ul>
+									</span>
+									<!-- /select -->
+								</div>
+								<div class='item w86px tar padr8'>SMS:</div>
+								<div class='item w425px mr12'>
+									<!-- select -->
+									<span class='p_select'>
+										<input class="select_value" type="hidden" value="" name="cargo[sms]" id="cargo_sms" />
+										<span class='current'></span>
+										<ul>
+												<li><a href='#' data-select='324'>324</a></li>
+												<li><a href='#' data-select='+7 (903) 406-6529'>+7 (903) 406-6529</a></li>
+										</ul>
+									</span>
+									<!-- /select -->
+								</div>
+								<div class='item w27px'>
+									<a href='#' class='tip_ico'>?</a>
+								</div>
+							</div>
+
+							<div class='row pad0'>
+								<div class='title_green'>&nbsp;</div>
+							</div>
+
+							<div class='row pad0'>
+								<label class='first big_h'>Примечание:</label>
+								<div class='item w882px'>
+									<textarea placeholder="ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ. ЗАПРЕЩАЕТСЯ УКАЗЫВАТЬ КОНТАКТНЫЕ ДАННЫЕ!" name="cargo[note]" id="cargo_note">
+</textarea>
+								</div>
+							</div>
